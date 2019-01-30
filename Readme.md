@@ -77,22 +77,22 @@ An In-memory H2 Database is used for simplicity on this project. The console is 
 
 http://localhost:8080/h2-console
 
-JDBC URL: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
-Username: sa
-Password: sa
+- JDBC URL: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+- Username: sa
+- Password: sa
 
 
 ## Frameworks / Libraries used
 
-Java 11
-Spring Boot 2.1.2 (Web, JPA)
-Docker
-Swagger 2
-H2 Database
-Liquibase
-Junit
-Mockito
-Jacoco
+- Java 11
+- Spring Boot 2.1.2 (Web, JPA)
+- Docker
+- Swagger 2
+- H2 Database
+- Liquibase
+- Junit
+- Mockito
+- Jacoco
 
 ## Coming soon
 
