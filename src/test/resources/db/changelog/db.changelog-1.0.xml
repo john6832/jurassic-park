@@ -1,0 +1,42 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="jguerrero" id="201901291211_create_tables">
+        <createTable tableName="reservation">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="pk_reservation"/>
+            </column>
+
+            <column name="token" type="VARCHAR(50)"/>
+            <column name="name" type="VARCHAR(50)"/>
+            <column name="email" type="VARCHAR(50)"/>
+            <column name="arrival_date" type="DATETIME"/>
+            <column name="departure_date" type="DATETIME"/>
+            <column name="reservation_status_id" type="INT(2)"/>
+
+        </createTable>
+        <createTable tableName="reservation_status">
+            <column autoIncrement="true" name="id" type="INT(2)">
+                <constraints primaryKey="true" primaryKeyName="pk_reservation_status"/>
+            </column>
+            <column name="name" type="VARCHAR(10)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="reservation_status_id"
+            baseTableName="reservation"
+            constraintName="fk_reservation_reservation_status"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableName="reservation_status"/>
+    </changeSet>
+
+    <changeSet author="jguerrero" id="201901291213_populate_tables">
+        <insert tableName="reservation_status">
+            <column name="name" value="Active"/>
+        </insert>
+        <insert tableName="reservation_status">
+            <column name="name" value="Cancelled"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
