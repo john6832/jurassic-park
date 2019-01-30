@@ -23,7 +23,7 @@ logging:
     root:
       INFO
     org.hibernate.SQL:
-      DEBUG
+      INFO
     org.springframework:
       INFO
 jurassic-world:
