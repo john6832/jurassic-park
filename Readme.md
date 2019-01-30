@@ -1,5 +1,4 @@
-
-# Welcome to Jurassic Park
+# Welcome to Jurassic Park 
 
 An underwater volcano formed a new small island in the Pacific Ocean last month. All the conditions on the island seems perfect and it was
 decided to open it up for the general public to experience the pristine uncharted territory.
@@ -65,16 +64,37 @@ In order to run the code coverage report run the following command inside the ro
 
 ``./gradlew test jacocoTestReport``
 
-## 
+## Application UI and Documentation
+
+This application is fully documented using Swagger 2 Plugin for Restful Web Services. 
+You can use the following UI to browse throughout the API features and even try out the different endpoints and test their different responses.
+
+http://localhost:8080/swagger-ui.html
+
+## Accesing the database
+
+An In-memory H2 Database is used for simplicity on this project. The console is enabled and can be accessed using the following url:
+
+http://localhost:8080/h2-console
+
+JDBC URL: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+Username: sa
+Password: sa
 
 
+## Frameworks / Libraries used
 
+Java 11
+Spring Boot 2.1.2 (Web, JPA)
+Docker
+Swagger 2
+H2 Database
+Liquibase
+Junit
+Mockito
+Jacoco
 
+## Coming soon
 
-    
-    
-    
-    
-    
-    
-    
+Jurassic World!
+   
